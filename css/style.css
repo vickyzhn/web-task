@@ -58,32 +58,28 @@ a {
 .font22 {
     font-size: 22px;
     line-height: 22px;
+}
+.font22-1 {
+    font-size: 22px;
+    line-height: 22px;
     margin-right: 30px;
 }
 
 /*布局*/
-.g-doc {
-    width: 100%;
-    height: 100%;
-    min-width: 1206px;
-}
+
 .g-header {
     width: 100%;
 }
 .g-content {
     width: 100%;
-    height: 1551px;
+    height: 100%;
     background: #f8f8f8;
+    padding-bottom: 120px;
 }
 .g-footer {
     width: 100%;
     height: 262px;
     background: #2c3339;
-}
-.g-inner {
-    width: 1206px;
-    height: 100%;
-    margin: auto;
 }
 .g-login {
     width: 100%;
@@ -95,6 +91,148 @@ a {
     top: 0;
     z-index: 99;
     display: none;
+}
+
+/*页面布局动态适应*/
+@media screen and (min-width:1205px) {
+    /*整体布局*/
+    .g-doc {
+        width: 100%;
+        height: 100%;
+        min-width: 1206px;
+    }
+    .g-inner {
+        width: 1206px;
+        height: 100%;
+        margin: auto;
+    }
+    /*模块布局-产品介绍*/
+    .m-product .product {
+        width: 358px;
+        margin: 58px 65px 53px 0;
+    }
+    .m-product .product-txt {
+        width: 251px;
+        height: 186px;
+        margin-left: 20px;
+    }
+    .m-product .product2 {
+        width: 358px;
+        margin: 58px 0 53px;
+    }
+    /*模块布局-课程列表*/
+    .m-class {
+        width: 980px;
+        padding-top: 80px;
+    }
+    .m-classcon {
+        width: 980px;
+        height: 1240px;
+        margin-top: 20px;
+    }
+    .class-list {
+        display: none;
+        width: 980px;
+        height: 1240px;
+    }
+    /*右侧other*/
+    .m-other {
+        width: 224px;
+        padding-top: 80px; 
+    }
+    .m-video {
+        width: 224px;
+        height: 100%;
+        padding-bottom: 20px;
+        background: #fff;
+        box-shadow: 1px 1px 1px, -1px 0 1px;
+        color: #d4d3d3;
+    }
+    .m-rank {
+        width: 224px;
+        height: 815px;
+        background: #fff;
+        box-shadow: 1px 1px 1px, -1px 0 1px;
+        color: #d4d3d3;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    /*尾部*/
+    .m-footer1 {
+        width: 470px;
+        margin: 75px 0 20px 50px;
+        font-size: 22px;
+        color: #39a030;
+        line-height: 28px;
+    }
+}
+@media screen and (max-width:1204px) {
+    .g-doc {
+        width: 100%;
+        height: 100%;
+        min-width: 980px;
+    }
+    .g-inner {
+        width: 980px;
+        height: 100%;
+        margin: auto;
+    }
+    .m-product .product {
+        width: 300px;
+        margin: 58px 40px 53px 0;
+    }
+    .m-product .product-txt {
+        width: 180px;
+        height: 186px;
+        margin-left: 20px;
+    }
+    .m-product .product2 {
+        width: 300px;
+        margin: 58px 0 53px;
+    }
+    .m-class {
+        width: 732px;
+        padding-top: 80px;
+    }
+    .m-classcon {
+        width: 732px;
+        height: 1240px;
+        margin-top: 20px;
+    }
+    .class-list {
+        display: none;
+        width: 732px;
+        height: 1240px;
+    }
+    /*右侧other*/
+    .m-other {
+        width: 248px;
+        padding-top: 80px; 
+    }
+    .m-video {
+        width: 248px;
+        height: 100%;
+        padding-bottom: 20px;
+        background: #fff;
+        box-shadow: 1px 1px 1px, -1px 0 1px;
+        color: #d4d3d3;
+    }
+    .m-rank {
+        width: 248px;
+        height: 815px;
+        background: #fff;
+        box-shadow: 1px 1px 1px, -1px 0 1px;
+        color: #d4d3d3;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .m-footer1 {
+        width: 407px;
+        margin: 75px 0 20px 50px;
+        font-size: 22px;
+        color: #39a030;
+        line-height: 28px;
+    }
 }
 
 /*功能*/
@@ -196,6 +334,10 @@ a {
     width: 100%;
     height: 100%;
 }
+.m-banner ul {
+    width: 100%;
+    height: 100%;
+}
 .m-banner ul li {
     position: absolute;
     top: 0;
@@ -232,27 +374,17 @@ a {
     width: 100%;
     height: 298px;
 }
-.m-product .product {
-    width: 358px;
-    margin: 58px 65px 53px 0;
-}
+
 .m-product .product-img{
     margin-top: 12px;
 }
-.m-product .product-txt {
-    width: 251px;
-    height: 186px;
-    margin-left: 20px;
-}
+
 .m-product .product-font14{
     font-size: 14px;
     line-height: 24px;
     color: #39a030;
 }
-.m-product .product2 {
-    width: 358px;
-    margin: 58px 0 53px;
-}
+
 
 /*工作环境*/
 .m-envir{
@@ -265,10 +397,7 @@ a {
 }
 
 /*左侧课程*/
-.m-class {
-    width: 980px;
-    padding-top: 80px;
-}
+
 .m-tab {
     width: 400px;
     height: 50px;
@@ -292,16 +421,7 @@ a {
 .m-tab .tab-choose a { 
     color: #fff;
 }
-.m-classcon {
-    width: 980px;
-    height: 1240px;
-    margin-top: 20px;
-}
-.class-list {
-    display: none;
-    width: 980px;
-    height: 1240px;
-}
+
 .class-list li {
     position: relative;
 }
@@ -441,20 +561,9 @@ a {
     background: #f8f8f8;
 }
 
-/*右侧other*/
-.m-other {
-    width: 224px;
-    padding-top: 80px; 
-}
+
 /*小视频*/
-.m-video {
-    width: 224px;
-    height: 100%;
-    padding-bottom: 20px;
-    background: #fff;
-    box-shadow: 1px 1px 1px, -1px 0 1px;
-    color: #d4d3d3;
-}
+
 .m-video font {
     font-size: 16px;
     line-height: 55px;
@@ -462,16 +571,17 @@ a {
     padding-left: 10px;
 }
 .m-video .video-tit {
-    width: 224px;
+    width: 100%;
     height: 55px;
     border-bottom: 1px solid #ddd;
 }
 .m-video .video-con {
     width: 180px;
-    margin-left: 22px;
+    margin: auto;
 }
 .m-video .video-con font {
     font-size: 14px;
+    margin-left: -10px;
 }
 .m-video .video-con a {
     width: 180px;
@@ -481,17 +591,9 @@ a {
 }
 
 /*排名*/
-.m-rank {
-    width: 224px;
-    height: 815px;
-    background: #fff;
-    box-shadow: 1px 1px 1px, -1px 0 1px;
-    color: #d4d3d3;
-    margin-top: 20px;
-    overflow: hidden;
-}
+
 .m-rank .rank-tit {
-    width: 224px;
+    width: 100%;
     height: 55px;
     border-bottom: 1px solid #ddd;
     background: #fff;
@@ -545,13 +647,7 @@ a {
     color: #bbb;
 }
 /*footer部分*/
-.m-footer1 {
-    width: 470px;
-    margin: 75px 0 20px 50px;
-    font-size: 22px;
-    color: #39a030;
-    line-height: 28px;
-}
+
 .m-footer1 font {
     font-size: 28px;
     line-height: 40px;

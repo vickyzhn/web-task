@@ -8,6 +8,17 @@
         uli = ul.getElementsByTagName('li'),
         ol = util.$('ool'),
         oli = ol.getElementsByTagName('li');
+    
+    //动态获取banner高度(实现自适应)
+    window.onresize = function(){
+        var banner_h = uli[0].offsetHeight,
+            banner = util.$('banner');
+        console.log('高度'+banner_h);
+        banner.style.height = banner_h+'px';
+        console.log(banner);
+        console.log('大div'+banner.style.height);
+    }
+    
     for(var i=0; i<oli.length; i++){
             util.addEvent(oli[i],'mouseover',showNum);
     }
@@ -44,6 +55,7 @@
             }
         }
     }
+    
     
     /*----------------------------------------------------------------------
 	 *content中课程列表部分，包括AJAX跨域请求，标签卡切换操作，转页部分
@@ -439,13 +451,18 @@
         video_play.style.display = 'block';
     }
     //视频窗口关闭
-    var video_close = util.$('video_close');
+    var video_close = util.$('video_close'),
+        video_h5 = util.$('video_h5');
     util.addEvent(video_close,'click',clickCloseVideo);
     function clickCloseVideo(event){
         var event = util.getEvent(event);
         util.preventEvent(event);
+        video_h5.pause();
         login_bg.style.display = 'none';
         video_play.style.display = 'none';
     }
+    
+    
+    
     
 })();

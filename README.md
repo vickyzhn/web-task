@@ -1,5 +1,5 @@
 # web-task 微课堂网站开发
-###demo地址：https://vickyzhn.github.com/web-task
+demo地址：https://vickyzhn.github.io/web-task/
 
 本项目实现以下9个功能的微课堂网站：  
   * 轮播图轮播效果

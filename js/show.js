@@ -13,10 +13,7 @@
     window.onresize = function(){
         var banner_h = uli[0].offsetHeight,
             banner = util.$('banner');
-        console.log('高度'+banner_h);
         banner.style.height = banner_h+'px';
-        console.log(banner);
-        console.log('大div'+banner.style.height);
     }
     
     for(var i=0; i<oli.length; i++){
